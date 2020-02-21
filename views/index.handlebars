@@ -1,0 +1,54 @@
+<h1 class="alert alert-primary mb-5">幹話產生器</h1>
+
+
+<form method="POST" action="/">
+  <p class="h2 pt-2 pb-2 text-align-center" style= "background-color: white" >你要對誰說幹話?</p>
+  <div class="card-deck">
+      <div class="card">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" class="card-img-top" alt="developer" >
+        <div class="card-body">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="jobs" id="engineer" value="engineer" 
+            {{#ifEquals jobs "engineer"}}checked{{/ifEquals}}>
+            <label class="form-check-label" for="engineer">
+              工程師
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" class="card-img-top" alt="designer">
+        <div class="card-body">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="jobs" id="designer" value="designer"
+            {{#ifEquals jobs "designer"}}checked{{/ifEquals}}>
+            <label class="form-check-label" for="designer">
+              設計師
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" height="auto" class="card-img-top" alt="founder">
+        <div class="card-body">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="jobs" id="founder" value="founder"
+            {{#ifEquals jobs "founder"}}checked{{/ifEquals}}>
+            <label class="form-check-label" for="founder">
+              創業家
+            </label>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="mt-2">
+    <!-- submit button -->
+    <div class="d-flex align-items-start justify-content-center row">
+      <button class="btn-primary btn mr-4 col-1"  type="submit">產生幹話</button>
+      <textarea class="col-8" name="" id="" cols="30" rows="5">
+      {{ sentance }}
+      </textarea>
+    </div>
+  </div>
+</form>
