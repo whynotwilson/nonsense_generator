@@ -12,11 +12,6 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
 app.engine('handlebars', exphbs({
   helpers: {
     ifEquals: function (arg1, arg2, options) {
-      console.log('arg1', arg1)
-      console.log('arg2', arg2)
-      console.log('this', this) //
-      console.log('options', options) //
-      console.log('options.fn', options.fn(this)) //
       if (arg1 === arg2) return options.fn(this)
     }
   }
@@ -32,10 +27,6 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   const jobs = req.body.jobs
-
-  console.log('jobs', jobs)
-  console.log('nonsecse', nonsenseGenerator(jobs))
-
   const sentance = nonsenseGenerator(jobs)
   res.render('index', { jobs, sentance })
 })
