@@ -1,6 +1,4 @@
-/* eslint-disable space-before-function-paren */
-// eslint-disable-next-line camelcase
-function nonsense_generator(jobs) {
+function nonsenseGenerator(jobs) {
   // 隨機取出一個 index
   function randomIndex(arr) {
     const len = arr.length
@@ -28,8 +26,4 @@ function nonsense_generator(jobs) {
   return sentance
 }
 
-// eslint-disable-next-line camelcase
-module.exports = nonsense_generator
-
-// let jobs = 'designer'
-// console.log(nonsense_generator(jobs))
+module.exports = nonsenseGenerator
